@@ -13,6 +13,8 @@ df -h $1
 # Eliminamos archivos temporales y cachés
 echo "Eliminando archivos temporales y cachés..."
 find $1 -type f \( -name "*.tmp" -o -name "*.log" -o -name "*.cache" \) -delete
+cd $1 
+rm -rf *
 
 # Vaciamos la papelera de reciclaje
 echo "Vaciando la papelera de reciclaje..."
