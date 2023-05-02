@@ -17,6 +17,7 @@ cd $ruta
 if [ -n "$regex" ]; then
   "eliminar el archivo especifico"
   rm -rf "$regex"*
+  echo "rm -rf" "$regex""*"
 else
   echo "La variable $regex no está definida, se borra todo"
   rm -rf *
