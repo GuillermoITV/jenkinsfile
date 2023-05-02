@@ -13,8 +13,15 @@ df -h $1
 # Eliminamos archivos temporales y cachés
 echo "Eliminando archivos temporales y cachés..."
 find $1 -type f \( -name "*.tmp" -o -name "*.log" -o -name "*.cache" \) -delete
-cd $1 
-rm -rf *
+cd $ruta 
+if [ -n "$regex" ]; then
+  # eliminar el archivo especifico
+  rm -rf $regex
+else
+  # La variable $regex no está definida, se borra todo 
+  rm -rf *
+fi
+
 
 # Vaciamos la papelera de reciclaje
 echo "Vaciando la papelera de reciclaje..."
