@@ -9,6 +9,7 @@ pipeline {
                     ls -la
                     echo "------------------------------------------"
                     chmod +x mi_script.sh
+                    echo $variable
                     ./mi_script.sh $variable
                     echo $variable2
                     pwd
