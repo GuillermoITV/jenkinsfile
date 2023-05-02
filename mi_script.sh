@@ -15,10 +15,10 @@ echo "Eliminando archivos temporales y cachés..."
 find $1 -type f \( -name "*.tmp" -o -name "*.log" -o -name "*.cache" \) -delete
 cd $ruta 
 if [ -n "$regex" ]; then
-  # eliminar el archivo especifico
+  "eliminar el archivo especifico"
   rm -rf *"$regex"*
 else
-  # La variable $regex no está definida, se borra todo 
+  echo "La variable $regex no está definida, se borra todo"
   rm -rf *
 fi
 
